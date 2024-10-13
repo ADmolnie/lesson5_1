@@ -54,7 +54,7 @@ def ban_user(message):
 @bot.message_handler(commands=['go'])
 def go_pokemon(message):
     pokemon = 'Let`s go play!'
-    bot.send_message(message, pokemon)
+    bot.reply_to(message, pokemon)
 
 
 bot.infinity_polling()
