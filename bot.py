@@ -51,4 +51,10 @@ def ban_user(message):
         bot.reply_to(message, "Эта команда должна быть использована в ответ на сообщение пользователя, которого вы хотите забанить.")
 
 
+@bot.message_handler(commands=['go'])
+def go_pokemon(message):
+    pokemon = 'Let`s go play!'
+    bot.send_message(message, pokemon)
+
+
 bot.infinity_polling()
