@@ -1,5 +1,4 @@
 import telebot
-from config import token
 from random import choice
 
 API_TOKEN = '7702403200:AAHA7_1HpF3Et0akp_q3g_RumYTHSUmX2pU'
@@ -49,12 +48,6 @@ def ban_user(message):
             bot.reply_to(message, f"Пользователь @{message.reply_to_message.from_user.username} был забанен.")
     else:
         bot.reply_to(message, "Эта команда должна быть использована в ответ на сообщение пользователя, которого вы хотите забанить.")
-
-
-@bot.message_handler(commands=['go'])
-def go_pokemon(message):
-    pokemon = 'Let`s go play!'
-    bot.reply_to(message, pokemon)
 
 
 bot.infinity_polling()
